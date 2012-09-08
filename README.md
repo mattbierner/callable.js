@@ -1,8 +1,8 @@
 # callable.js - Small Function Calling Javascript Library #
 
 ## About ##
-callable.js is a small library for calling functions in Javascript using apply
-and call type syntax. Also includes utilities for altering function arguments.
+callable.js is a small library for calling functions in Javascript using 'apply'
+and 'call' style syntax. Also includes utilities for altering function arguments.
 
 callable.js can provide a functional style interface to OO Javascript code.
 This is useful for interfacing with builtins:
