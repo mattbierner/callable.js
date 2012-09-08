@@ -1,4 +1,4 @@
-# callable.js - Small Function Calling Javascript Library. #
+# callable.js - Small Function Calling Javascript Library #
 
 ## About ##
 callable.js is a small library for calling functions in Javascript using apply
