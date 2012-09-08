@@ -102,7 +102,7 @@ an array.
 
 ## applicablea(f: function, args: array) ##
 Higher order function for explicit OO function application. Also supports binding
-arguments.Returned funciton as 'Funciton.prototype.apply' type syntax.
+arguments. Returns funciton with 'Funciton.prototype.apply' syntax.
 
     var slicea = callable.applicablea(Array.prototype.slice);
     slicea([1, 2, 3, 4], [1, 3]) -> [2, 3]
@@ -123,7 +123,7 @@ Same as 'applicablea' but takes bound arguments as arguments instead of an array
 
 ## callablea(f: function, args: array) ##
 Higher order function for explicit OO function calling. Also supports binding
-arguments. Returned funciton as 'Funciton.prototype.call' type syntax.
+arguments. Returns funciton with 'Funciton.prototype.call' syntax.
 
     var slicea = callable.callablea(Array.prototype.slice);
     slice([1, 2, 3, 4], 1, 3) -> [2, 3]
