@@ -125,11 +125,11 @@ Same as 'applicablea' but takes bound arguments as arguments instead of an array
 Higher order function for explicit OO function calling. Also supports binding
 arguments. Returns funciton with 'Funciton.prototype.call' syntax.
 
-    var slicea = callable.callablea(Array.prototype.slice);
+    var slice = callable.callablea(Array.prototype.slice);
     slice([1, 2, 3, 4], 1, 3) -> [2, 3]
     
     // bind first argument
-    var slicea2 = callable.callablea(Array.prototype.slice, [1]);
+    var slice2 = callable.callablea(Array.prototype.slice, [1]);
     slice2([1, 2, 3, 4], 3) -> [2, 3]
 
 ## callable(f: function, ...args) ##
