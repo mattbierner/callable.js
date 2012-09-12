@@ -29,7 +29,7 @@ Supports binding leading arguments:
 Callable.js can be used either as an AMD style module or in the global scope.
 
 ## With AMD ##
-Include any AMD style module loader and load SSF.
+Include any AMD style module loader and load gen:
 
     <!DOCTYPE html>
     <html>
@@ -45,7 +45,7 @@ Include any AMD style module loader and load SSF.
     </body>
 
 ## Global ##
-Include callable.js file directly and use 'callable' global.
+Include callable.js file directly and use 'callable' global:
 
     <!DOCTYPE html>
     <html>
