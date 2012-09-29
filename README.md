@@ -28,6 +28,8 @@ Supports binding leading arguments:
 # Using Callable.js #
 Callable.js can be used either as an AMD style module or in the global scope.
 
+Depends on args: https://github.com/mattbierner/args.js
+
 ## With AMD ##
 Include any AMD style module loader and load callable:
 
