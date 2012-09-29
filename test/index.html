@@ -12,11 +12,17 @@
     <script src="resources/qunit-1.9.0.js"></script>
     <script type="application/javascript" src="resources/require.js"></script>
     <script type="application/javascript">
+        requirejs.config({
+            paths: {
+                callable: '../lib/callable',
+                args: 'resources/args',
+            }
+        });
         require(
-            ['../lib/callable', 'testWrap', 'testBundle', 'testApplicable', 'testCallable'],
-            function(callable, testWrap, testBundle, testApplicable, testCallable)
+            ['callable', 'testApplicable', 'testCallable'],
+            function(callable, testApplicable, testCallable)
             {
-                [testWrap, testBundle, testApplicable, testCallable].forEach(function(m){
+                [testApplicable, testCallable].forEach(function(m){
                     m.module && module(m.module);
                     m.tests.forEach(function(e){ test.apply(this, e); });
             });

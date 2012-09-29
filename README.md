@@ -2,7 +2,7 @@
 
 ## About ##
 callable.js is a small library for calling functions in Javascript using 'apply'
-and 'call' style syntax. Also includes utilities for altering function arguments.
+and 'call' style syntax. 
 
 callable.js can provide a functional style interface to OO Javascript code.
 This is useful for interfacing with builtins:
@@ -29,7 +29,7 @@ Supports binding leading arguments:
 Callable.js can be used either as an AMD style module or in the global scope.
 
 ## With AMD ##
-Include any AMD style module loader and load gen:
+Include any AMD style module loader and load callable:
 
     <!DOCTYPE html>
     <html>
@@ -61,44 +61,6 @@ Include callable.js file directly and use 'callable' global:
 
 # API #
 Overview of API and examples. More detailed documentation can be found in the code.
-
-## wrap(f: funciton, ...function(...args): Array) ##
-Wraps a function in a set of functions that give the function's arguments.
-Like composition if Javascript supported multiple return values.
-
-    // Return calling arguments as array.
-    function args(){
-        return Array.prototype.map.call(arguments, function(e) { return e; });
-    }
-    
-    // Increment calling arguments and return array.
-    function inc(){
-        return Array.prototype.map.call(arguments, function(e) { return e + 1; });
-    }
-    
-    // Multiply calling arguments by two and return array.
-    function mul(){
-        return Array.prototype.map.call(arguments, function(e) { return e * 2; });
-    }
-    
-    var wrapped = callable.wrap(args, inc, mul);
-    wrapped(1, 2, 3) -> [3, 5, 7]
-
-## bundle(f: function, index: number) ##
-Wraps a function in a function that bundles a range of calling arguments into
-an array.
-
-    // Returns calling arguments as array.
-    function args(){
-        return Array.prototype.map.call(arguments, function(e) { return e; });
-    }
-    
-    var bundled = callable.bundle(args);
-    bundled(1, 2, 3) -> [[1, 2, 3]]
-    
-    // Bundle arguments after first
-    var bundled2 = callable.bundle(args, 1);
-    bundled2(1, 2, 3) -> [1, [2, 3]]
 
 ## applicablea(f: function, args: array) ##
 Higher order function for explicit OO function application. Also supports binding

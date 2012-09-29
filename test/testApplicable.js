@@ -1,4 +1,4 @@
-define(['../lib/callable'], function(callable){
+define(['callable'], function(callable){
     
     function first(){
         return this[0];
